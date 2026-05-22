@@ -1,284 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="May Grace — Strategic operations, ESG reporting, and sustainability program professional based in Bangkok, Thailand.">
+  <meta name="description"
+    content="May Grace (May Thi Thi Moe) — Strategic Operations, ESG Reporting, and Sustainability program professional based in Bangkok, Thailand.">
   <title>May Grace — Portfolio</title>
+
+  <!-- MANDATORY: Declare support for both light and dark themes to help browser theme native scrollbars/UI early -->
+  <meta name="color-scheme" content="light dark">
+
+  <!-- FOUC (Flash of Unstyled Content) Prevention Script -->
+  <script>
+    (function () {
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme) {
+        document.documentElement.setAttribute('data-theme', storedTheme);
+      }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="main-header">
-    <div class="container header-content">
-      <h1>May Thi Thi Moe</h1>
-      <p class="header-role">May Grace · Strategic Operations &amp; Sustainability</p>
-      <p class="header-tagline">Translating complex climate and impact data into actionable frameworks for organizations in critical growth stages.</p>
-      <div class="header-contacts">
-        <a href="mailto:nawchrismoo@gmail.com">nawchrismoo@gmail.com</a>
-        <span>+66 995 011 378</span>
-        <span>Bangkok, Thailand</span>
-        <a href="https://www.linkedin.com/in/may-grace-126206150/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.researchgate.net/profile/Mayt-Grace" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+  <div class="app-layout">
+
+    <!-- Sidebar / Hero column (Fixed on desktop) -->
+    <aside class="profile-sidebar">
+      <div class="sidebar-sticky-content">
+
+        <div class="sidebar-header-row">
+          <!-- Monogram Logo -->
+          <div class="profile-avatar">
+            <svg class="avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <circle cx="50" cy="50" r="46" class="avatar-circle" stroke="var(--color-border)" stroke-width="2" />
+              <!-- Abstract elegant ESG organic leaf overlay -->
+              <path d="M50 20C63 20 70 32 65 44C60 56 50 68 50 80C50 68 40 56 35 44C30 32 37 20 50 20Z"
+                fill="var(--color-accent-dim)" />
+              <path d="M50 75C50 62 45 52 40 48M50 62C50 54 55 46 60 42" stroke="var(--color-accent)" stroke-width="1.5"
+                stroke-linecap="round" />
+              <text x="50" y="56" font-family="var(--font-title)" font-weight="700" font-size="24"
+                fill="var(--color-text-title)" text-anchor="middle" letter-spacing="-0.5">MG</text>
+              <circle cx="50" cy="18" r="2.5" fill="var(--color-accent)" />
+            </svg>
+          </div>
+
+          <!-- Theme Toggle Widget -->
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <!-- Sun Icon -->
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon -->
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="profile-card">
+          <h1 class="profile-name">May Thi Thi Moe</h1>
+          <p class="profile-alias">May Grace</p>
+          <div class="role-badge">Strategic Operations &amp; ESG Leader</div>
+          <p class="profile-tagline">Translating complex climate and impact data into actionable frameworks for
+            organizations in critical growth stages.</p>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar-nav" aria-label="Portfolio sections">
+          <ul>
+            <li><a href="#about" class="nav-link active">About &amp; Summary</a></li>
+            <li><a href="#experience" class="nav-link">Professional Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#projects" class="nav-link">Key Projects</a></li>
+            <li><a href="#engagements" class="nav-link">Policy &amp; Conferences</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#skills" class="nav-link">Specialized Skills</a></li>
+            <li><a href="#contact" class="nav-link">Get in Touch</a></li>
+          </ul>
+        </nav>
+
+        <!-- Sidebar Footer Action & Socials -->
+        <div class="sidebar-footer">
+          <a href="May_Grace.pdf" target="_blank" class="download-resume-btn" download
+            aria-label="Download May Grace CV PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download CV</span>
+          </a>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/may-grace-126206150/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://www.researchgate.net/profile/Mayt-Grace" target="_blank" rel="noopener noreferrer"
+              aria-label="ResearchGate Profile">
+              <span class="rg-icon" aria-hidden="true">R<sup>G</sup></span>
+            </a>
+            <a href="mailto:nawchrismoo@gmail.com" aria-label="Email May Grace">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </header>
+    </aside>
 
-  <nav class="main-nav" aria-label="Page sections">
-    <div class="container nav-content">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#engagements">Engagements</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- Main Content Area -->
+    <main class="content-area">
 
-  <section id="about">
-    <div class="container">
-      <h2>Summary</h2>
-      <p class="">Dedicated strategic operations and program professional with over eight years of combined experience in grassroots empowerment and corporate sustainability. I specialize in translating complex climate data into actionable frameworks, supported by an M.A. in Environment, Development, and Sustainability from Chulalongkorn University.</p>
-      <p class="">I help organizations through critical growth stages—from start-up to maturity—managing cross-functional workflows with CRM and automation platforms to track, integrate, and optimize complex backend data. My work spans multi-country program coordination, stakeholder engagement, business development, and ESG reporting.</p>
-    </div>
-  </section>
+      <!-- Section: About -->
+      <section id="about">
+        <h2 class="section-title">Summary</h2>
+        <div class="narrative-block">
+          <p class="lead-text">Dedicated strategic operations and program professional with over eight years of combined
+            experience in grassroots empowerment and corporate sustainability.</p>
+          <p>I specialize in translating complex climate data into actionable frameworks, supported by an M.A. in
+            Environment, Development, and Sustainability from Chulalongkorn University. My expertise spans driving
+            corporate transition initiatives, optimizing operations from early-stage to corporate maturity, and leading
+            regional sustainability strategies.</p>
+          <p>I support organizations through critical growth stages by managing cross-functional workflows and
+            leveraging CRM, BI, and automation platforms to structure and optimize complex backend databases. My core
+            competencies lie in multi-country program coordination, stakeholder relationship management, data-driven ESG
+            reporting, and strategic business development.</p>
+        </div>
+      </section>
 
-  
+      <!-- Section: Experience -->
+      <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
 
-  <section id="experience">
-    <div class="container">
-      <h2>Experience</h2>
+          <!-- Experience Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="item-header">
+                <h3 class="item-title">Lead, Strategic Initiatives &amp; Operations (Thailand)</h3>
+                <span class="item-duration">May 2021 – Oct 2023</span>
+              </div>
+              <div class="item-org">
+                <span class="org-name">Banyan Partners</span>
+                <span class="org-location">Bangkok, Thailand (HQ)</span>
+              </div>
+              <ul class="item-details">
+                <li>Managed cross-functional operational workflows, utilizing CRM and Automation Platforms to track,
+                  integrate, and optimize complex backend data management.</li>
+                <li>Directed International Schools Partnerships, executing comparative analysis of educational pathways
+                  and curriculum requirements to drive institutional collaboration.</li>
+                <li>Led high-priority Infrastructure Projects, overseeing comprehensive spatial optimization, vendor
+                  negotiations, and strict adherence to Project Budgets.</li>
+                <li>Facilitated strategic development through the creation of comprehensive frameworks and proposals for
+                  Grant Applications and community-focused initiatives.</li>
+                <li>Managed Marketing Operations and business development activities, driving cross-team alignment on
+                  key organizational priorities.</li>
+                <li>Led operational infrastructure and partnership initiatives across the firm’s broader portfolio.</li>
+              </ul>
+            </div>
+          </div>
 
-      <div class="experience-item">
-        <h3>Lead, Strategic Initiatives &amp; Operations (Thailand) — Banyan Partners</h3>
-        <p class="item-meta"><strong>Bangkok, Thailand</strong> · Dec 2025 – Present</p>
-        <ul>
-          <li>Managed cross-functional operational workflows using CRM and automation platforms to track, integrate, and optimize complex backend data.</li>
-          <li>Directed international schools partnerships, executing comparative analysis of educational pathways and curriculum requirements.</li>
-          <li>Managed marketing operations and business development, driving cross-team alignment on organizational priorities.</li>
-          <li>Led operational infrastructure and partnership initiatives across the firm’s broader portfolio.</li>
-          <li>Facilitated strategic development through frameworks and proposals for grant applications and community-focused initiatives.</li>
-        </ul>
-      </div>
+          <!-- Experience Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="item-header">
+                <h3 class="item-title">PR &amp; ESG Manager (Southeast Asia)</h3>
+                <span class="item-duration">May 2021 – Oct 2023</span>
+              </div>
+              <div class="item-org">
+                <span class="org-name">Agros (Agrosolar)</span>
+                <span class="org-location">Southeast Asia Operations</span>
+              </div>
+              <p class="org-intro">Social enterprise focused on sustainable agriculture and empowering smallholder
+                farmers through solar irrigation technology and market access.</p>
+              <ul class="item-details">
+                <li>Managed multi-country ESG data, using CRM and Data Analytics platforms to track, analyze, and report
+                  on key Environmental, Economic and Social Impact Metrics.</li>
+                <li>Led ESG projects for the company’s Annual Impact Report, coordinating with cross-functional teams to
+                  ensure the timely achievement of Project Milestones.</li>
+                <li>Facilitated Grant Acquisition and managed Donor Relations through the preparation of comprehensive
+                  reports and Policy documentation.</li>
+                <li>Conducted Market Research to support the company’s expansion initiatives in Southeast Asia.</li>
+                <li>Supported strategic Business Development activities and managed Public Relations, including
+                  management of the corporate Website and LinkedIn channel.</li>
+              </ul>
+            </div>
+          </div>
 
-      <div class="experience-item">
-        <h3>PR &amp; ESG Manager (Southeast Asia) — Agros (Agrosolar)</h3>
-        <p class="item-meta"><strong>Southeast Asia</strong> · May 2021 – Oct 2023</p>
-        <p class="item-desc">Social enterprise focused on sustainable agriculture and empowering smallholder farmers through solar irrigation technology and market access.</p>
-        <ul>
-          <li>Managed multi-country ESG data using CRM and analytics platforms to track environmental, economic, and social impact metrics.</li>
-          <li>Led ESG projects for the annual impact report, coordinating cross-functional teams on project milestones.</li>
-          <li>Facilitated grant acquisition and donor relations through comprehensive reports and policy documentation.</li>
-          <li>Conducted market research to support Southeast Asia expansion initiatives.</li>
-          <li>Supported business development and public relations, including corporate website and LinkedIn management.</li>
-        </ul>
-      </div>
+          <!-- Experience Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="item-header">
+                <h3 class="item-title">Sales Operations Specialist (Myanmar)</h3>
+                <span class="item-duration">Mar 2018 – Apr 2021</span>
+              </div>
+              <div class="item-org">
+                <span class="org-name">Greenlight Planet (Sun King)</span>
+                <span class="org-location">Global Operations</span>
+              </div>
+              <p class="org-intro">Designs, distributes, and finances solar-powered home energy products for off-grid
+                communities across Africa, South Asia, Asia-Pacific, and Latin America.</p>
+              <ul class="item-details">
+                <li>Developed and implemented strategic Sales Plans for field teams of 100+ sales agents, resulting in
+                  increased revenue and expanded market reach.</li>
+                <li>Utilized Looker (BI) and CRM systems to monitor sales performance, identify new business
+                  opportunities, and inform Strategic Planning by the Country Director.</li>
+                <li>Fostered and maintained relationships with Donor Organizations and managed Project Impact data for
+                  Stakeholder Reporting.</li>
+                <li>Supported Business Development initiatives by identifying potential new sales channels and
+                  Partnerships to drive Market Expansion.</li>
+                <li>Provided operational support to the Human Resources, Finance, Risk Management and Marketing
+                  departments in Myanmar, collaborating with the regional headquarters in India.</li>
+              </ul>
+              <div class="award-badge" aria-label="Award">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="award-icon">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <span>Dedicated Service Award</span>
+              </div>
+            </div>
+          </div>
 
-      <div class="experience-item">
-        <h3>Sales Operations Specialist (Myanmar) — Greenlight Planet (Sun King)</h3>
-        <p class="item-meta"><strong>Global Operations</strong> · Mar 2018 – Apr 2021</p>
-        <p class="item-desc">Designs, distributes, and finances solar-powered home energy products for off-grid communities across Africa, South Asia, Asia-Pacific, and Latin America.</p>
-        <ul>
-          <li>Developed and implemented strategic sales plans for field teams of 100+ sales agents, increasing revenue and market reach.</li>
-          <li>Utilized Looker (BI) and CRM systems to monitor sales performance and inform country director strategic planning.</li>
-          <li>Fostered donor relationships and managed project impact data for stakeholder reporting.</li>
-          <li>Supported business development by identifying new sales channels and partnerships for market expansion.</li>
-          <li>Provided operational support to HR, Finance, Risk Management, and Marketing in Myanmar, collaborating with regional HQ in India.</li>
-        </ul>
-        <span class="badge">Dedicated Service Award</span>
-      </div>
-    </div>
-  </section>
+        </div>
+      </section>
 
-  <section id="education">
-    <div class="container">
-      <h2>Education</h2>
+      <!-- Section: Education -->
+      <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
 
-      <div class="education-item">
-        <h3>M.A. Environment, Development and Sustainability — Chulalongkorn University</h3>
-        <p class="item-meta"><strong>Bangkok, Thailand</strong> · Aug 2023 – Jul 2025 · GPA 3.8/4.0</p>
-        <p class="item-desc">Recipient of ASEAN/Non-ASEAN Scholarships. Research: <em>Assessing the Socio-economic Impacts of Solar Irrigation in Myanmar: A Case Study of Smallholders</em>.</p>
-      </div>
+          <!-- Education 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="item-header">
+                <h3 class="item-title">M.A. Environment, Development and Sustainability</h3>
+                <span class="item-duration">Aug 2023 – Jul 2025</span>
+              </div>
+              <div class="item-org">
+                <span class="org-name">Chulalongkorn University</span>
+                <span class="org-location">Bangkok, Thailand</span>
+              </div>
+              <p class="org-intro">GPA 3.8 / 4.0 · Recipient of ASEAN/Non-ASEAN Scholarships</p>
+              <div class="academic-research">
+                <strong>Research Thesis:</strong> <em>“Assessing the Socio-economic Impacts of Solar Irrigation in
+                  Myanmar: A Case Study of Smallholders”</em>
+              </div>
+            </div>
+          </div>
 
-      <div class="education-item">
-        <h3>B.A. Social Studies — Myanmar Institute of Theology</h3>
-        <p class="item-meta">Oct 2012 – Sep 2016 · GPA 3.4/4.0</p>
-      </div>
+          <!-- Education 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="item-header">
+                <h3 class="item-title">B.A. Social Studies</h3>
+                <span class="item-duration">Oct 2012 – Sep 2016</span>
+              </div>
+              <div class="item-org">
+                <span class="org-name">Myanmar Institute of Theology</span>
+                <span class="org-location">Liberal Arts Program, Myanmar</span>
+              </div>
+              <p class="org-intro">GPA 3.4 / 4.0</p>
+            </div>
+          </div>
 
-      <div class="education-item">
-        <h3>B.A. English — Yangon University of Distance Education</h3>
-        <p class="item-meta">Jun 2011 – Oct 2015 · GPA 3.2/4.0</p>
-      </div>
-    </div>
-  </section>
+          <!-- Education 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="item-header">
+                <h3 class="item-title">B.A. English</h3>
+                <span class="item-duration">Jun 2011 – Oct 2015</span>
+              </div>
+              <div class="item-org">
+                <span class="org-name">Yangon University of Distance Education</span>
+                <span class="org-location">Yangon, Myanmar</span>
+              </div>
+              <p class="org-intro">GPA 3.2 / 4.0</p>
+            </div>
+          </div>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Key Projects &amp; Early Career</h2>
+        </div>
+      </section>
 
-      <div class="project-item">
-        <h3>Hospital Management System</h3>
-        <p class="item-meta">Academic Project (STEM) · Jun 2025</p>
-        <p class="item-desc">Designed a database-driven system for patient data and appointment scheduling, applying Python and system design principles.</p>
-      </div>
+      <!-- Section: Key Projects -->
+      <section id="projects">
+        <h2 class="section-title">Key Projects &amp; Early Career</h2>
+        <div class="projects-grid">
 
-      <div class="project-item">
-        <h3>Women’s Rights Consultant — ActionAid Myanmar</h3>
-        <p class="item-meta">Sep – Oct 2016</p>
-        <p class="item-desc">Conducted on-site data collection and community awareness campaigns; provided subject-matter expertise for program development and advocacy.</p>
-      </div>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <span class="project-type">Academic STEM Project</span>
+            </div>
+            <h3 class="project-title">Hospital Management System</h3>
+            <p class="project-desc">Designed and developed a database-driven system to streamline patient data and
+              appointment scheduling, applying Python programming and system design principles.</p>
+            <div class="project-meta">June 2025</div>
+          </div>
 
-      <div class="project-item">
-        <h3>Peer Educator &amp; Trainer — Precious Stones INGO</h3>
-        <p class="item-meta">May 2011 – Oct 2016</p>
-        <p class="item-desc">Delivered 5+ years of empowerment programs for marginalized youth—life skills, education, vocational training, and child/women’s rights.</p>
-      </div>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="project-type">ActionAid Myanmar</span>
+            </div>
+            <h3 class="project-title">Women’s Rights Consultant</h3>
+            <p class="project-desc">Conducted on-site data collection and community awareness campaigns on women’s
+              rights, utilizing the findings to provide subject-matter expertise for program development and advocacy.
+            </p>
+            <div class="project-meta">Sep – Oct 2016</div>
+          </div>
 
-      <div class="project-item">
-        <h3>Conservation Volunteer — BANCA</h3>
-        <p class="item-meta">Apr 2014</p>
-        <p class="item-desc">Participated in biodiversity field surveys and community engagement for local conservation efforts in Myanmar.</p>
-      </div>
-    </div>
-  </section>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+              <span class="project-type">Precious Stones INGO</span>
+            </div>
+            <h3 class="project-title">Peer Educator &amp; Trainer</h3>
+            <p class="project-desc">Delivered comprehensive, 5+ year empowerment programs for marginalized youth,
+              facilitating structured curricula on life skills, vocational training, and child/women’s rights.</p>
+            <div class="project-meta">May 2011 – Oct 2016</div>
+          </div>
 
-  <section id="engagements">
-    <div class="container">
-      <h2>Conferences &amp; Policy Engagements</h2>
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 5.12 2h13.76a.42.42 0 0 1 .41.32l2.44 7.56 1.22 3.78a.84.84 0 0 1-.3.94z">
+                  </path>
+                </svg>
+              </div>
+              <span class="project-type">BANCA (NGO)</span>
+            </div>
+            <h3 class="project-title">Biodiversity Conservation Volunteer</h3>
+            <p class="project-desc">Participated in field biodiversity surveys and community engagement initiatives to
+              support local environmental conservation efforts in Myanmar.</p>
+            <div class="project-meta">April 2014</div>
+          </div>
 
-      <div class="project-item">
-        <h3>Global AI Perspectives: Research, Implementation and Workforce</h3>
-        <p class="item-meta">Chulalongkorn University · Jun 2025</p>
-        <p class="item-desc">Workshop on AI landscape, workforce development, and ethical implementation in the ASEAN context.</p>
-      </div>
+        </div>
+      </section>
 
-      <div class="project-item">
-        <h3>World Bank Group Youth Summit 2025</h3>
-        <p class="item-meta">World Bank · May 2025</p>
-        <p class="item-desc">Sessions on digital transformation, green agriculture, and creative industries.</p>
-      </div>
+      <!-- Section: Engagements -->
+      <section id="engagements">
+        <h2 class="section-title">Conferences &amp; Policy Engagements</h2>
+        <div class="engagements-list">
 
-      <div class="project-item">
-        <h3>Asia-Pacific Youth Development Forum 2024</h3>
-        <p class="item-meta">UNDP · Oct 2024</p>
-        <p class="item-desc">Regional policy discussions on youth-led innovations for green transition, sustainable cities, and resilient food systems.</p>
-      </div>
+          <div class="engagement-row">
+            <div class="engagement-bullet"></div>
+            <div class="engagement-detail">
+              <div class="engagement-header">
+                <h4>Global AI Perspectives: Research, Implementation and Workforce</h4>
+                <span class="engagement-date">Jun 2025</span>
+              </div>
+              <p class="engagement-location">Chulalongkorn University</p>
+              <p class="engagement-desc">Participated in a specialized workshop on the global landscape of Artificial
+                Intelligence, exploring its implications for research, workforce development, and ethical implementation
+                in the ASEAN context.</p>
+            </div>
+          </div>
 
-      <div class="project-item">
-        <h3>Youth Empowerment in Climate Action Platform — UN Conference #3</h3>
-        <p class="item-meta">Jan 2023</p>
-        <p class="item-desc">Engaged with young climate leaders on sustainable environmental policy, climate justice, and inequality.</p>
-      </div>
-    </div>
-  </section>
+          <div class="engagement-row">
+            <div class="engagement-bullet"></div>
+            <div class="engagement-detail">
+              <div class="engagement-header">
+                <h4>World Bank Group Youth Summit 2025</h4>
+                <span class="engagement-date">May 2025</span>
+              </div>
+              <p class="engagement-location">World Bank Group</p>
+              <p class="engagement-desc">Participated in discussions and breakout sessions covering digital
+                transformation, climate-resilient green agriculture, and creative industries.</p>
+            </div>
+          </div>
 
-  <section id="certifications">
-    <div class="container">
-      <h2>Certifications</h2>
+          <div class="engagement-row">
+            <div class="engagement-bullet"></div>
+            <div class="engagement-detail">
+              <div class="engagement-header">
+                <h4>Asia-Pacific Youth Development Forum 2024</h4>
+                <span class="engagement-date">Oct 2024</span>
+              </div>
+              <p class="engagement-location">United Nations Development Programme (UNDP)</p>
+              <p class="engagement-desc">Contributed to regional policy discussions by analyzing youth-led innovations
+                for a green transition, focusing on sustainable cities and resilient food systems.</p>
+            </div>
+          </div>
 
-      <div class="project-item">
-        <h3>Foundations of Sustainability and ESG</h3>
-        <p class="item-meta">University of Oxford · Aug – Nov 2025</p>
-        <p class="item-desc">Evaluated sustainability challenges facing business and society; explored ESG metrics and data frameworks.</p>
-      </div>
+          <div class="engagement-row">
+            <div class="engagement-bullet"></div>
+            <div class="engagement-detail">
+              <div class="engagement-header">
+                <h4>Youth Empowerment in Climate Action Platform (YECAP) UN Conference #3</h4>
+                <span class="engagement-date">Jan 2023</span>
+              </div>
+              <p class="engagement-location">United Nations</p>
+              <p class="engagement-desc">Engaged with regional climate leaders on the development of sustainable, green
+                environmental policy, and strategic action plans for climate justice and addressing systemic
+                inequalities.</p>
+            </div>
+          </div>
 
-      <div class="project-item">
-        <h3>Python Programming Essentials</h3>
-        <p class="item-meta">STEM School (SUM) · Apr – Jul 2025</p>
-        <p class="item-desc">Programming fundamentals, OOP, GUI development, and MySQL database integration.</p>
-      </div>
+        </div>
+      </section>
 
-      <div class="project-item">
-        <h3>SAP Analytics Cloud Training</h3>
-        <p class="item-meta">ASEAN Data Science Explorers 2025 · Apr – May 2025</p>
-      </div>
+      <!-- Section: Certifications -->
+      <section id="certifications">
+        <h2 class="section-title">Professional &amp; Technical Certifications</h2>
+        <div class="certs-grid">
 
-      <div class="project-item">
-        <h3>GIS for Climate Action</h3>
-        <p class="item-meta">Esri · May – Jun 2024</p>
-        <p class="item-desc">Geospatial analysis of climate data, environmental change mapping, and climate action strategies.</p>
-      </div>
+          <div class="cert-card">
+            <div class="cert-institution">University of Oxford (UK)</div>
+            <h3 class="cert-title">Foundations of Sustainability and ESG</h3>
+            <p class="cert-desc">Evaluated major sustainability challenges facing business and society; explored how
+              organizations leverage specific ESG metrics and data frameworks (GRI, SASB, TCFD) to effectively address
+              them.</p>
+            <div class="cert-date">Aug – Nov 2025</div>
+          </div>
 
-      <div class="project-item">
-        <h3>Climate Leader Initiative</h3>
-        <p class="item-meta">Development Innovation Insider · Nov – Dec 2022</p>
-        <p class="item-desc">Vulnerable groups protection, sustainable agriculture, disaster management, and green energy (hydrogen, biomass).</p>
-      </div>
-    </div>
-  </section>
+          <div class="cert-card">
+            <div class="cert-institution">STEM School (SUM)</div>
+            <h3 class="cert-title">Python Programming Essentials</h3>
+            <p class="cert-desc">Completed comprehensive training covering programming fundamentals, object-oriented
+              programming (OOP), GUI development, and relational database integration with MySQL.</p>
+            <div class="cert-date">Apr – Jul 2025</div>
+          </div>
 
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
+          <div class="cert-card">
+            <div class="cert-institution">ASEAN Foundation &amp; SAP</div>
+            <h3 class="cert-title">SAP Analytics Cloud Training</h3>
+            <p class="cert-desc">Participated in joint enablement sessions hosted by the ASEAN Foundation and SAP under
+              the ASEAN Data Science Explorers 2025 framework.</p>
+            <div class="cert-date">Apr – May 2025</div>
+          </div>
 
-      <div class="skills-group">
-        <h3>ESG &amp; Sustainability</h3>
-        <ul>
-          <li>ESG Data Management &amp; Reporting</li>
-          <li>ESG Frameworks (GRI, SASB, TCFD)</li>
-          <li>GHG Accounting</li>
-          <li>Impact Measurement</li>
-          <li>Grant Management</li>
-          <li>Stakeholder Engagement</li>
-          <li>Community Development</li>
-        </ul>
-      </div>
+          <div class="cert-card">
+            <div class="cert-institution">Esri</div>
+            <h3 class="cert-title">GIS for Climate Action</h3>
+            <p class="cert-desc">Acquired advanced skills in using Geospatial Information Systems (GIS) to analyze
+              spatial climate data, map ecological environmental changes, and model climate action strategies.</p>
+            <div class="cert-date">May – Jun 2024</div>
+          </div>
 
-      <div class="skills-group">
-        <h3>Strategic Initiatives &amp; Operations Management</h3>
-        <ul>
-          <li>Business Development &amp; Marketing Operations</li>
-          <li>Strategic Partnerships</li>
-          <li>Market Analysis &amp; Expansion</li>
-          <li>Sales Operations Strategy</li>
-          <li>Project Management</li>
-          <li>Data-Driven Strategy</li>
-        </ul>
-      </div>
+          <div class="cert-card">
+            <div class="cert-institution">Development Innovation Insider</div>
+            <h3 class="cert-title">Climate Leader Initiative</h3>
+            <p class="cert-desc">Completed a program focusing on protecting vulnerable groups in climate crises,
+              sustainable agricultural practices, disaster risk management, and green energy solutions (biomass,
+              hydrogen).</p>
+            <div class="cert-date">Nov – Dec 2022</div>
+          </div>
 
-      <div class="skills-group">
-        <h3>Technical &amp; Data</h3>
-        <ul>
-          <li>Looker (BI)</li>
-          <li>CRM &amp; Automation Platforms</li>
-          <li>GIS</li>
-          <li>Data Analysis</li>
-          <li>Backend Data Management</li>
-          <li>Python</li>
-        </ul>
-      </div>
+        </div>
+      </section>
 
-      <div class="skills-group">
-        <h3>Languages</h3>
-        <ul>
-          <li>English — Professional</li>
-          <li>Burmese — Native</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+      <!-- Section: Skills -->
+      <section id="skills">
+        <h2 class="section-title">Specialized Skills</h2>
+        <div class="skills-section-grid">
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:nawchrismoo@gmail.com">nawchrismoo@gmail.com</a></p>
-      <p><strong>Phone:</strong> +66 995 011 378</p>
-      <p><strong>Location:</strong> Bangkok, Thailand</p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/may-grace-126206150/" target="_blank" rel="noopener noreferrer">May.T Grace</a></p>
-      <p><strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Mayt-Grace" target="_blank" rel="noopener noreferrer">May.T Grace</a></p>
-    </div>
-  </section>
+          <div class="skills-category-card">
+            <h3 class="skills-cat-title">ESG &amp; Sustainability</h3>
+            <ul class="skills-pill-list">
+              <li>ESG Data Management</li>
+              <li>Sustainability Reporting</li>
+              <li>GRI, SASB, TCFD Frameworks</li>
+              <li>GHG Accounting</li>
+              <li>Impact Measurement</li>
+              <li>Grant Management</li>
+              <li>Stakeholder Engagement</li>
+              <li>Community Development</li>
+            </ul>
+          </div>
 
-  <footer class="main-footer">
-    <div class="container footer-content">
-      <p>&copy; 2026 May Grace · <a href="mailto:nawchrismoo@gmail.com">Get in touch</a></p>
-    </div>
-  </footer>
+          <div class="skills-category-card">
+            <h3 class="skills-cat-title">Business &amp; Strategy</h3>
+            <ul class="skills-pill-list">
+              <li>Business Development</li>
+              <li>Market Analysis &amp; Expansion</li>
+              <li>Agri-tech &amp; Solar Operations</li>
+              <li>Sales Operations Strategy</li>
+              <li>Project Management</li>
+              <li>Data-Driven Strategy</li>
+            </ul>
+          </div>
+
+          <div class="skills-category-card">
+            <h3 class="skills-cat-title">Technical &amp; Data</h3>
+            <ul class="skills-pill-list">
+              <li>Looker (BI)</li>
+              <li>CRM Platforms &amp; Automation</li>
+              <li>Geospatial Systems (GIS)</li>
+              <li>Data Analysis</li>
+              <li>Python Programming</li>
+              <li>MySQL Database</li>
+            </ul>
+          </div>
+
+          <div class="skills-category-card">
+            <h3 class="skills-cat-title">Languages</h3>
+            <ul class="skills-pill-list">
+              <li>English <span class="lang-prof">Professional</span></li>
+              <li>Burmese <span class="lang-prof">Native</span></li>
+              <li>Japanese <span class="lang-prof">N5 Basic</span></li>
+              <li>Chinese <span class="lang-prof">HSK 1 Basic</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section: Contact -->
+      <section id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-card">
+          <p class="contact-intro">Feel free to reach out for collaborations in sustainability reporting, strategic
+            operations management, or program coordination.</p>
+
+          <div class="contact-details-grid">
+            <a href="mailto:nawchrismoo@gmail.com" class="contact-method">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">nawchrismoo@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+66995011378" class="contact-method">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-info-text">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+66 995 011 378</span>
+              </div>
+            </a>
+
+            <div class="contact-method no-link">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-info-text">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Bangkok, Thailand</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="main-footer">
+        <p>&copy; 2026 May Grace</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- Theme Toggle & Active Highlight Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('theme-toggle');
+
+      const getTheme = () => {
+        const currentAttr = document.documentElement.getAttribute('data-theme');
+        if (currentAttr) return currentAttr;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      };
+
+      const applyTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+
+        const metaTheme = document.querySelector('meta[name="color-scheme"]');
+        if (metaTheme) {
+          metaTheme.content = theme === 'dark' ? 'dark' : 'light';
+        }
+      };
+
+      // Handle click
+      toggleButton.addEventListener('click', () => {
+        const currentTheme = getTheme();
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+      });
+
+      // Active Section Highlighting on Scroll
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      const highlightNav = () => {
+        let scrollPosition = window.scrollY + 120;
+
+        // Handle bottom of page
+        if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const contactLink = document.querySelector('.nav-link[href="#contact"]');
+          if (contactLink) contactLink.classList.add('active');
+          return;
+        }
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      };
+
+      window.addEventListener('scroll', highlightNav);
+      highlightNav(); // Initial call
+    });
+  </script>
 </body>
+
 </html>
