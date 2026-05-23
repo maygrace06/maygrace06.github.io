@@ -253,15 +253,19 @@ a:hover {
   height: 90px;
 }
 
-.avatar-svg {
+.avatar-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.02));
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
 }
 
-.avatar-circle {
-  stroke: var(--color-border);
-  fill: var(--color-avatar-bg);
+.avatar-img:hover {
+  transform: scale(1.05);
+  border-color: var(--color-accent);
 }
 
 /* Theme Toggle Button Styling */
@@ -781,6 +785,81 @@ section:last-of-type {
 }
 
 /* -----------------------------------------
+   6.5 Volunteer/Project Experience
+   ----------------------------------------- */
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.volunteer-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.volunteer-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.volunteer-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.volunteer-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-accent-dim);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.volunteer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.volunteer-role {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-title);
+  line-height: 1.3;
+}
+
+.volunteer-org {
+  font-family: var(--font-sans);
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.volunteer-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-body);
+  flex-grow: 1;
+}
+
+/* -----------------------------------------
    7. Conferences & Engagements
    ----------------------------------------- */
 .engagements-list {
@@ -1152,6 +1231,10 @@ section:last-of-type {
   }
 
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-grid {
     grid-template-columns: 1fr;
   }
 
